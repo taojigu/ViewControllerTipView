@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import <VTStatusTipModel.h>
+#import <UIViewController+StatusTip.h>
+#import "DemoTipModelFactory.h"
 
 @interface ViewController ()
 
@@ -26,8 +29,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)registerStatusTip {
+- (IBAction)button404Clicked:(id)sender {
     
+}
+
+- (IBAction)buttonNoNetworkingClicked:(id)sender {
+    
+}
+
+- (void)registerStatusTip {
+    NSArray *tipModelArray = [DemoTipModelFactory demoTipModelArray];
+    [self registerStatusTipArray:tipModelArray];
 }
 
 
