@@ -43,9 +43,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24o-a6-5ZA">
-                                <rect key="frame" x="88" y="188" width="76" height="30"/>
+                                <rect key="frame" x="91" y="188" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="EmptyData"/>
+                                <state key="normal" title="Disconnet"/>
                                 <connections>
                                     <action selector="buttonNoNetworkingClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lty-3a-nGM"/>
                                 </connections>

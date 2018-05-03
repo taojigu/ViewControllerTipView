@@ -11,4 +11,5 @@
 @interface DemoTipModelFactory : NSObject
 
 +(NSArray *)demoTipModelArray;
+
 @end

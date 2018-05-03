@@ -30,11 +30,11 @@
 }
 
 - (IBAction)button404Clicked:(id)sender {
-    
+    [self showStatus:@"404"];
 }
 
 - (IBAction)buttonNoNetworkingClicked:(id)sender {
-    
+    [self showStatus:@"NetDisconnet"];
 }
 
 - (void)registerStatusTip {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16B4FFE32099EB2C008E77F9 /* DemoTipModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B4FFE22099EB2B008E77F9 /* DemoTipModelFactory.m */; };
 		21E9873C22301FC9D3706485 /* libPods-DemoViewControllerTipViewUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BDFABDCDA50654ABACF66CF /* libPods-DemoViewControllerTipViewUITests.a */; };
 		3FC2560416D4B48B479C4433 /* libPods-DemoViewControllerTipViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D38F28D652DB7550D9C8D4 /* libPods-DemoViewControllerTipViewTests.a */; };
 		CC352FD92097169800E2FC0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC352FD82097169800E2FC0A /* AppDelegate.m */; };
@@ -40,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		00D38F28D652DB7550D9C8D4 /* libPods-DemoViewControllerTipViewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoViewControllerTipViewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16B4FFE12099EB2B008E77F9 /* DemoTipModelFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoTipModelFactory.h; sourceTree = "<group>"; };
+		16B4FFE22099EB2B008E77F9 /* DemoTipModelFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTipModelFactory.m; sourceTree = "<group>"; };
 		21A4D06E91108C9B3B97143C /* Pods-DemoViewControllerTipViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoViewControllerTipViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoViewControllerTipViewTests/Pods-DemoViewControllerTipViewTests.release.xcconfig"; sourceTree = "<group>"; };
 		307E4C07174694ED05A043A4 /* libPods-DemoViewControllerTipView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoViewControllerTipView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD4CA050BDEF2CA76D6CD79 /* Pods-DemoViewControllerTipView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoViewControllerTipView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoViewControllerTipView/Pods-DemoViewControllerTipView.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 				CC352FE22097169900E2FC0A /* LaunchScreen.storyboard */,
 				CC352FE52097169900E2FC0A /* Info.plist */,
 				CC352FE62097169900E2FC0A /* main.m */,
+				16B4FFE12099EB2B008E77F9 /* DemoTipModelFactory.h */,
+				16B4FFE22099EB2B008E77F9 /* DemoTipModelFactory.m */,
 			);
 			path = DemoViewControllerTipView;
 			sourceTree = "<group>";
@@ -474,6 +479,7 @@
 				CC352FDC2097169800E2FC0A /* ViewController.m in Sources */,
 				CC352FE72097169900E2FC0A /* main.m in Sources */,
 				CC352FD92097169800E2FC0A /* AppDelegate.m in Sources */,
+				16B4FFE32099EB2C008E77F9 /* DemoTipModelFactory.m in Sources */,
 				CC35300C2097253C00E2FC0A /* DemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
