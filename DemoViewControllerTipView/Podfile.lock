@@ -1,5 +1,7 @@
 PODS:
-  - ViewControllerTipView (0.0.1)
+  - Masonry (1.1.0)
+  - ViewControllerTipView (0.0.1):
+    - Masonry
 
 DEPENDENCIES:
   - ViewControllerTipView (from `../`)
@@ -9,7 +11,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ViewControllerTipView: 16a6235437dc19f6caa7f205be7c32cce9b979f3
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ViewControllerTipView: 3b5658f02e4ff8ab188f9dafe52ecef601b357f4
 
 PODFILE CHECKSUM: 6e05767dc3f0ee914bbe09f9686755e181afdbcf
 

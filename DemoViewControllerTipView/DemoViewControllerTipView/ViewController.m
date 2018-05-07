@@ -20,7 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self registerStatusTip];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self registerStatusBlock:@"404" block:^{
+        NSLog(@"404 operation");
+    }];
 }
 
 
@@ -30,11 +32,11 @@
 }
 
 - (IBAction)button404Clicked:(id)sender {
-    [self showStatus:@"404"];
+    [self showStatusView:@"404"];
 }
 
 - (IBAction)buttonNoNetworkingClicked:(id)sender {
-    [self showStatus:@"NetDisconnet"];
+    [self showStatusView:@"NetDisconnet"];
 }
 
 - (void)registerStatusTip {

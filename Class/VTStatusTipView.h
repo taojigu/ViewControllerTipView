@@ -8,8 +8,13 @@
 #import <UIKit/UIKit.h>
 #import "VTStatusTipModel.h"
 
+/**
+ Status View , shown on the ViewController.view
+ */
 @interface VTStatusTipView : UIView
 
-- (instancetype)initWithStatusTipModel:(VTStatusTipModel *)tipModel;
+
+- (void)confgureTipModel:(VTStatusTipModel *)model;
+
 
 @end
