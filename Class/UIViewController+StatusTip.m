@@ -12,7 +12,7 @@
 @interface UIViewController ()
 
 @property (nonatomic) NSMutableDictionary *statusTipModelDict;
-@property (nonatomic) UIImageView *statusImageView;
+@property (nonatomic) VTStatusTipView *statusTipView;
 
 @end;
 
@@ -31,6 +31,7 @@
 - (void)statusTipModelDict:(NSMutableDictionary *)statusTipModelDict {
     objc_setAssociatedObject(self, @selector(statusTipModelDict), statusTipModelDict, OBJC_ASSOCIATION_RETAIN);
 }
+
 
 - (void)registerStatusTip:(VTStatusTipModel *)statusTipModel {
     NSString *code = statusTipModel.statusCode;
