@@ -8,12 +8,25 @@
 #import <Foundation/Foundation.h>
 #import "VTStatusTipModel.h"
 
+/**
+ Message for status operatrions
+ */
 @interface UIViewController (StatusTip)
 
+/**
+ Register shown tip for the status
+ */
 - (void)registerStatusTip:(VTStatusTipModel *)statusTipModel;
 
+/**
+ Register show tips for statuses
+ */
 - (void)registerStatusTipArray:(NSArray *)statusTipModelArray;
 
-- (void)showStatus:(NSString *)statusCode;
+- (void)showStatusView:(NSString *)statusCode;
+
+- (void)hideStausView;
+
+- (void)registerStatusBlock:(NSString *)statusCode block:(void (^)(void))block;
 
 @end

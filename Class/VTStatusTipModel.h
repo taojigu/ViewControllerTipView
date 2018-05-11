@@ -14,6 +14,7 @@
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *message;
 @property (nonatomic) UIImage *statusImage;
-@property (nonatomic,copy) void(^ statusBlock)(UIViewController *);
+@property (nonatomic) NSString *buttonText;
+@property (nonatomic ,copy) void(^ statusBlock)(void);
 
 @end

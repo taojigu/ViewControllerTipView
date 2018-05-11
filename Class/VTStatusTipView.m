@@ -7,22 +7,51 @@
 
 #import "VTStatusTipView.h"
 
+@interface VTStatusTipView ()
+
+@property (nonatomic) VTStatusTipModel *statusTipModel;
+@property (nonatomic) UILabel *titleLabel;
+@property (nonatomic) UILabel *messageLabel;
+@property (nonatomic) UIButton *blockButton;
+@property (nonatomic) UIImageView *imageView;
+
+@end
+
 @implementation VTStatusTipView
 
-
-- (instancetype)initWithStatusTipModel:(VTStatusTipModel *)tipModel {
-    self = [super initWithFrame:CGRectZero];
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
     if (self) {
-        
+        [self privateInit];
     }
     return self;
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+
+- (void)privateInit {
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    _blockButton = [[UIButton alloc] initWithFrame:CGRectZero];
+    [_blockButton addTarget:self action:@selector(blockButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [_blockButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_blockButton setBackgroundColor:[UIColor grayColor]];
+    return;
 }
-*/
+
+- (void)confgureTipModel:(VTStatusTipModel *)model {
+    self.statusTipModel = model;
+    [self refreshStatusTipView];
+}
+
+- (void)refreshStatusTipView {
+    self.imageView.image = self.statusTipModel.statusImage;
+    [self.blockButton setTitle:self.statusTipModel.buttonText forState:UIControlStateNormal];
+    self.titleLabel.text = self.statusTipModel.title;
+    self.messageLabel.text = self.statusTipModel.message;
+    [self setNeedsLayout];
+}
+
+- (void)blockButtonClicked {
+    self.statusTipModel.statusBlock();
+}
 
 @end
