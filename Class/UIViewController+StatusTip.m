@@ -12,15 +12,13 @@
 @interface UIViewController ()
 
 @property (nonatomic) NSMutableDictionary *statusTipModelDict;
-//@property (nonatomic) NSMutableDictionary *statusBlockDict;
-@property (nonatomic) UIImageView *statusImageView;
+
 @property (nonatomic) VTStatusTipView *statusTipView;
 
 @end;
 
 
 @implementation UIViewController (StatusTip)
-
 
 - (void)registerStatusTip:(VTStatusTipModel *)statusTipModel {
     NSString *code = statusTipModel.statusCode;
