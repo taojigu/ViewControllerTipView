@@ -41,6 +41,7 @@
 
 - (void)registerStatusTip {
     NSArray *tipModelArray = [DemoTipModelFactory demoTipModelArray];
+    //[self registerStatusTipArray:tipModelArray];
     [self registerStatusTipArray:tipModelArray];
 }
 

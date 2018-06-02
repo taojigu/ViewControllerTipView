@@ -13,6 +13,10 @@
  */
 @interface UIViewController (StatusTip)
 
+//The container view ,on which the status View will be displayed
+//"self.view" by default.
+@property (nonatomic, weak) UIView *statusContainerView;
+
 /**
  Register shown tip for the status
  */

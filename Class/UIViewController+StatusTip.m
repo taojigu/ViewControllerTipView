@@ -12,14 +12,12 @@
 @interface UIViewController ()
 
 @property (nonatomic) NSMutableDictionary *statusTipModelDict;
-
 @property (nonatomic) VTStatusTipView *statusTipView;
 
 @end;
 
 
 @implementation UIViewController (StatusTip)
-
 - (void)registerStatusTip:(VTStatusTipModel *)statusTipModel {
     NSString *code = statusTipModel.statusCode;
     self.statusTipModelDict[code] = statusTipModel;
@@ -52,6 +50,8 @@
         return;
     }
     [self.statusTipView confgureTipModel:model];
+    [self.statusTipView removeFromSuperview];
+    [self.view addSubview:self.statusTipView];
 }
 
 - (void)showStatusImageView:(NSString *)statusCode {
@@ -81,7 +81,7 @@
     return dict;
 }
 
-- (void)statusTipModelDict:(NSMutableDictionary *)statusTipModelDict {
+- (void)setStatusTipModelDict:(NSMutableDictionary *)statusTipModelDict {
     objc_setAssociatedObject(self, @selector(statusTipModelDict), statusTipModelDict, OBJC_ASSOCIATION_RETAIN);
 }
 
@@ -110,6 +110,32 @@
 
 - (void)setStatusImageView:(UIImageView *)statusImageView {
     objc_setAssociatedObject(self, @selector(statusImageView), statusImageView, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (VTStatusTipView *)statusTipView {
+    VTStatusTipView *stview = objc_getAssociatedObject(self, @selector(statusTipView));
+    if (!stview) {
+        stview = [[VTStatusTipView alloc] initWithFrame:self.statusContainerView.bounds];
+        stview.backgroundColor = [UIColor blueColor];
+        [self setStatusTipView:stview];
+    }
+    return stview;
+};
+
+- (void) setStatusTipView:(VTStatusTipView *)statusTipView {
+    objc_setAssociatedObject(self, @selector(statusTipView), statusTipView, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (UIView *)statusContainerView {
+    UIView *containView = objc_getAssociatedObject(self, @selector(statusContainerView));
+    if(!containView) {
+        return self.view;
+    }
+    return containView;
+}
+
+- (void)setStatusContainerView:(UIView *)statusContainerView {
+    objc_setAssociatedObject(self, @selector(statusContainerView), statusContainerView, OBJC_ASSOCIATION_ASSIGN);
 }
 
 @end
