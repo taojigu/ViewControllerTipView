@@ -2,7 +2,7 @@
 //  UIViewController+StatusTip.m
 //  Pods-DemoViewControllerTipView
 //
-//  Created by gus on 2018/5/1.
+//  Created by GuJitao on 2018/5/1.
 //
 
 #import "UIViewController+StatusTip.h"
@@ -53,7 +53,7 @@
     [self.statusTipView removeFromSuperview];
     [self.view addSubview:self.statusTipView];
 }
-
+/*
 - (void)showStatusImageView:(NSString *)statusCode {
     NSAssert(statusCode.length > 0, @"status Code should not be nil");
     VTStatusTipModel *model = self.statusTipModelDict[statusCode];
@@ -64,10 +64,10 @@
     self.statusImageView.hidden = NO;
     self.statusImageView.image = model.statusImage;
     [self.statusImageView bringSubviewToFront:self.view];
-}
+}*/
 
 - (void)hideStausView {
-    
+    self.statusContainerView.hidden = YES;
 }
 
 
@@ -115,7 +115,7 @@
 - (VTStatusTipView *)statusTipView {
     VTStatusTipView *stview = objc_getAssociatedObject(self, @selector(statusTipView));
     if (!stview) {
-        stview = [[VTStatusTipView alloc] initWithFrame:self.statusContainerView.bounds];
+        stview = [[VTStatusTipView alloc] initWithFrame:self.statusContainerView.bounds showStyle:VTShowStatusStyleDefault];
         stview.backgroundColor = [UIColor blueColor];
         [self setStatusTipView:stview];
     }

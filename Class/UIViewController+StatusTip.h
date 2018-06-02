@@ -2,11 +2,12 @@
 //  UIViewController+StatusTip.h
 //  Pods-DemoViewControllerTipView
 //
-//  Created by gus on 2018/5/1.
+//  Created by GuJitao on 2018/5/1.
 //
 
 #import <Foundation/Foundation.h>
 #import "VTStatusTipModel.h"
+#import "VTShowStatusStyle.h"
 
 /**
  Message for status operatrions
@@ -27,10 +28,19 @@
  */
 - (void)registerStatusTipArray:(NSArray *)statusTipModelArray;
 
+/**
+ Show the status , responding the statusCode
+ */
 - (void)showStatusView:(NSString *)statusCode;
 
+/**
+ Hide the status View
+ */
 - (void)hideStausView;
 
+/**
+ Register the block , trigged on the status View
+ */
 - (void)registerStatusBlock:(NSString *)statusCode block:(void (^)(void))block;
 
 @end

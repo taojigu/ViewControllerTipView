@@ -2,7 +2,7 @@
 //  ViewController.m
 //  DemoViewControllerTipView
 //
-//  Created by gus on 2018/4/30.
+//  Created by GuJitao on 2018/4/30.
 //  Copyright © 2018年 Gu. All rights reserved.
 //
 
@@ -19,9 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.translucent = NO;
     [self registerStatusTip];
     [self registerStatusBlock:@"404" block:^{
         NSLog(@"404 operation");
+    }];
+    
+    [self registerStatusBlock:@"NetDisconnet" block:^{
+        NSLog(@"Disconnect operation");
     }];
 }
 

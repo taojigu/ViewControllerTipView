@@ -2,7 +2,7 @@
 //  DemoViewControllerTipViewUITests.m
 //  DemoViewControllerTipViewUITests
 //
-//  Created by gus on 2018/4/30.
+//  Created by GuJitao on 2018/4/30.
 //  Copyright © 2018年 Gu. All rights reserved.
 //
 
