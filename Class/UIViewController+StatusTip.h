@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "VTStatusTipModel.h"
 #import "VTShowStatusStyle.h"
+#import "VTShowStatus.h"
 
 /**
  Message for status operatrions
@@ -43,4 +44,8 @@
  */
 - (void)registerStatusBlock:(NSString *)statusCode block:(void (^)(void))block;
 
+/**
+ Register the statusView, shown when the statusCode is trigged
+ */
+- (void)registerStatusView:(NSString *)statusCode statusView:(id<VTShowStatus>)statusView;
 @end

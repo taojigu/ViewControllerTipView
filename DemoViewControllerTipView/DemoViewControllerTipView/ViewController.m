@@ -19,14 +19,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor yellowColor];
     self.navigationController.navigationBar.translucent = NO;
     [self registerStatusTip];
     [self registerStatusBlock:@"404" block:^{
         NSLog(@"404 operation");
+        [self hideStausView];
     }];
     
     [self registerStatusBlock:@"NetDisconnet" block:^{
         NSLog(@"Disconnect operation");
+        [self hideStausView];
     }];
 }
 

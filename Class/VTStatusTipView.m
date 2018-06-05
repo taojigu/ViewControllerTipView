@@ -46,6 +46,12 @@
     _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     [self addSubview:_titleLabel];
     
+    _messageLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    _messageLabel.textColor = [UIColor grayColor];
+    _messageLabel.textAlignment = NSTextAlignmentCenter;
+    _messageLabel.numberOfLines = 0;
+    [self addSubview:_messageLabel];
+    
     _blockButton = [[UIButton alloc] initWithFrame:CGRectZero];
     [_blockButton addTarget:self action:@selector(blockButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     [_blockButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -122,6 +128,14 @@
         make.centerX.mas_equalTo(self);
         make.width.height.equalTo(@(80));
         make.top.mas_equalTo(self).with.offset(60);
+    }];
+    
+    
+    [self.messageLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self);
+        make.leading.mas_equalTo(self).with.offset(10);
+        make.trailing.mas_equalTo(self).with.offset(-10);
+        make.top.equalTo(self.imageView.mas_bottom).with.offset(10);
     }];
 }
 

@@ -13,6 +13,7 @@
 
 @property (nonatomic) NSMutableDictionary *statusTipModelDict;
 @property (nonatomic) VTStatusTipView *statusTipView;
+@property (nonatomic) NSMutableDictionary *statusViewDict;
 
 @end;
 
@@ -53,23 +54,14 @@
     [self.statusTipView removeFromSuperview];
     [self.view addSubview:self.statusTipView];
 }
-/*
-- (void)showStatusImageView:(NSString *)statusCode {
-    NSAssert(statusCode.length > 0, @"status Code should not be nil");
-    VTStatusTipModel *model = self.statusTipModelDict[statusCode];
-    CGFloat imageWidth = 100;
-    CGFloat left = (CGRectGetWidth(self.view.frame) - 100) / 2;
-    CGFloat top = 80;
-    self.statusImageView.frame = CGRectMake(left, top, imageWidth, imageWidth);
-    self.statusImageView.hidden = NO;
-    self.statusImageView.image = model.statusImage;
-    [self.statusImageView bringSubviewToFront:self.view];
-}*/
 
 - (void)hideStausView {
-    self.statusContainerView.hidden = YES;
+    [self.statusTipView removeFromSuperview];
 }
 
+- (void)registerStatusView:(NSString *)statusCode statusView:(id<VTShowStatus>)statusView {
+    
+}
 
 #pragma mark -- property messages
 - (NSMutableDictionary *)statusTipModelDict {
@@ -83,6 +75,19 @@
 
 - (void)setStatusTipModelDict:(NSMutableDictionary *)statusTipModelDict {
     objc_setAssociatedObject(self, @selector(statusTipModelDict), statusTipModelDict, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (NSMutableDictionary *)statusViewDict {
+    NSMutableDictionary *dict = objc_getAssociatedObject(self, @selector(statusViewDict));
+    if (!dict) {
+        dict = [NSMutableDictionary new];
+        [self setStatusViewDict:dict];
+    }
+    return dict;
+}
+
+- (void)setStatusViewDict:(NSMutableDictionary *)statusViewDict {
+    objc_setAssociatedObject(self, @selector(statusViewDict), statusViewDict, OBJC_ASSOCIATION_RETAIN);
 }
 
 - (NSMutableDictionary *)statusBlockDict {
