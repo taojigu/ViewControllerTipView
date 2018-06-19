@@ -28,6 +28,9 @@
     [self registerStatusBlock:@"NetDisconnet" block:^{
         NSLog(@"Disconnect operation");
     }];
+    
+    UIView *sv405 = [[UIView alloc] initWithFrame:CGRectZero];
+    [self registerStatusView:sv405 forCode:@"405"];
 }
 
 

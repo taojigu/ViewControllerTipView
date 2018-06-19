@@ -43,4 +43,6 @@
  */
 - (void)registerStatusBlock:(NSString *)statusCode block:(void (^)(void))block;
 
+- (void)registerStatusView:(UIView *)statusView forCode:(NSString *)code;
+
 @end

@@ -13,6 +13,7 @@
 
 @property (nonatomic) NSMutableDictionary *statusTipModelDict;
 @property (nonatomic) VTStatusTipView *statusTipView;
+@property (nonatomic) NSMutableDictionary *statusViewDict;
 
 @end;
 
@@ -68,6 +69,10 @@
 
 - (void)hideStausView {
     self.statusContainerView.hidden = YES;
+}
+
+- (void)registerStatusView:(UIView *)statusView forCode:(NSString *)code {
+    
 }
 
 
