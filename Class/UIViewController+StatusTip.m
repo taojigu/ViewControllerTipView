@@ -13,6 +13,7 @@
 
 @property (nonatomic) NSMutableDictionary *statusTipModelDict;
 @property (nonatomic) VTStatusTipView *statusTipView;
+@property (nonatomic) NSMutableDictionary *statusViewDict;
 
 
 
@@ -45,26 +46,6 @@
     
 }
 
-- (void)showStatusView:(NSString *)statusCode {
-    NSAssert(statusCode.length > 0, @"status Code should not be nil");
-    VTStatusTipModel *model = self.statusTipModelDict[statusCode];
-    if (!model) {
-        return;
-    }
-    [self.statusTipView confgureTipModel:model];
-    [self.statusTipView removeFromSuperview];
-    [self.view addSubview:self.statusTipView];
-}
-
-
-- (void)hideStausView {
-    self.statusContainerView.hidden = YES;
-}
-
-- (void)registerStatusView:(UIView *)statusView forCode:(NSString *)code {
-    
-}
-
 
 #pragma mark -- property messages
 - (NSMutableDictionary *)statusTipModelDict {
@@ -78,6 +59,19 @@
 
 - (void)setStatusTipModelDict:(NSMutableDictionary *)statusTipModelDict {
     objc_setAssociatedObject(self, @selector(statusTipModelDict), statusTipModelDict, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (NSMutableDictionary *)statusViewDict {
+    NSMutableDictionary *dict = objc_getAssociatedObject(self, @selector(statusViewDict));
+    if (!dict) {
+        dict = [NSMutableDictionary new];
+        [self setStatusViewDict:dict];
+    }
+    return dict;
+}
+
+- (void)setStatusViewDict:(NSMutableDictionary *)statusViewDict {
+    objc_setAssociatedObject(self, @selector(statusViewDict), statusViewDict, OBJC_ASSOCIATION_RETAIN);
 }
 
 - (NSMutableDictionary *)statusBlockDict {

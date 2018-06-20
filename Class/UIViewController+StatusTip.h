@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "VTStatusTipModel.h"
 #import "VTShowStatusStyle.h"
+#import "VTShowStatus.h"
 
 /**
  Message for status operatrions
@@ -25,12 +26,9 @@
  */
 - (void)registerStatusTipArray:(NSArray *)statusTipModelArray;
 
-
-
 /**
  Register the block , trigged on the status View
  */
 - (void)registerStatusBlock:(NSString *)statusCode block:(void (^)(void))block;
-
 
 @end
