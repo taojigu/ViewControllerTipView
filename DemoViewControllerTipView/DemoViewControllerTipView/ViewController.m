@@ -7,9 +7,6 @@
 //
 
 #import "ViewController.h"
-#import <VTStatusTipModel.h>
-#import <UIViewController+StatusTip.h>
-#import "DemoTipModelFactory.h"
 #import <UIViewController+StatusView.h>
 
 @interface ViewController ()
@@ -22,16 +19,6 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
     self.navigationController.navigationBar.translucent = NO;
-    [self registerStatusTip];
-    [self registerStatusBlock:@"404" block:^{
-        NSLog(@"404 operation");
-        [self hideStausView];
-    }];
-    
-    [self registerStatusBlock:@"NetDisconnet" block:^{
-        NSLog(@"Disconnect operation");
-        [self hideStausView];
-    }];
     
     UIView *sv405 = [[UIView alloc] initWithFrame:CGRectZero];
     sv405.backgroundColor = [UIColor blueColor];
@@ -49,22 +36,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)button404Clicked:(id)sender {
-    [self showStatusView:@"404"];
-}
-
 - (IBAction)button405Clicked:(id)sender {
     [self showStatusView:@"405"];
-}
-
-- (IBAction)buttonNoNetworkingClicked:(id)sender {
-    [self showStatusView:@"NetDisconnet"];
-}
-
-- (void)registerStatusTip {
-    NSArray *tipModelArray = [DemoTipModelFactory demoTipModelArray];
-    //[self registerStatusTipArray:tipModelArray];
-    [self registerStatusTipArray:tipModelArray];
 }
 
 

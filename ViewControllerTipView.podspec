@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     s.source       = {:git => 'https://github.com/taojigu/ViewContontrollerStatusTip.git', :tag => s.version}
     s.source_files = 'Class/**/*.{h,m}'
     s.requires_arc = true
-    s.dependency     'Masonry'
+    #s.dependency     'Masonry'
     #s.dependency    'MJRefresh'
     #s.dependency    'AFNetworking','~>3.2.0'
     #s.dependency    'Reachability','~>3.2'
