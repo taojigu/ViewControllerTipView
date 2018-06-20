@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
     s.license      = 'MIT'
     s.authors      = {'Gujitao' => 'taojigu@163.com'}
     s.platform     = :ios, '6.0'
-    s.source       = {:git => 'https://github.com/taojigu/ViewContontrollerStatusTip.git', :tag => s.version}
+    s.source       = {:git => 'https://github.com/taojigu/ViewContontrollerStatusTip.git', :tag => 'v0.0.1'}
     s.source_files = 'Class/**/*.{h,m}'
     s.requires_arc = true
     #s.dependency     'Masonry'
