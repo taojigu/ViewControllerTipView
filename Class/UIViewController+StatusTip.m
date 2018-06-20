@@ -13,7 +13,8 @@
 
 @property (nonatomic) NSMutableDictionary *statusTipModelDict;
 @property (nonatomic) VTStatusTipView *statusTipView;
-@property (nonatomic) NSMutableDictionary *statusViewDict;
+
+
 
 @end;
 
@@ -54,18 +55,7 @@
     [self.statusTipView removeFromSuperview];
     [self.view addSubview:self.statusTipView];
 }
-/*
-- (void)showStatusImageView:(NSString *)statusCode {
-    NSAssert(statusCode.length > 0, @"status Code should not be nil");
-    VTStatusTipModel *model = self.statusTipModelDict[statusCode];
-    CGFloat imageWidth = 100;
-    CGFloat left = (CGRectGetWidth(self.view.frame) - 100) / 2;
-    CGFloat top = 80;
-    self.statusImageView.frame = CGRectMake(left, top, imageWidth, imageWidth);
-    self.statusImageView.hidden = NO;
-    self.statusImageView.image = model.statusImage;
-    [self.statusImageView bringSubviewToFront:self.view];
-}*/
+
 
 - (void)hideStausView {
     self.statusContainerView.hidden = YES;

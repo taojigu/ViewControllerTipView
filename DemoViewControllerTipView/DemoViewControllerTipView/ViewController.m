@@ -10,6 +10,7 @@
 #import <VTStatusTipModel.h>
 #import <UIViewController+StatusTip.h>
 #import "DemoTipModelFactory.h"
+#import <UIViewController+StatusView.h>
 
 @interface ViewController ()
 
@@ -30,9 +31,15 @@
     }];
     
     UIView *sv405 = [[UIView alloc] initWithFrame:CGRectZero];
-    [self registerStatusView:sv405 forCode:@"405"];
+    sv405.backgroundColor = [UIColor blueColor];
+    UITapGestureRecognizer *tapRecg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap405StatusView:)];
+    [sv405 addGestureRecognizer:tapRecg];
+    [self registerStatusView:sv405 forStatusCode:@"405"];
 }
 
+- (void)tap405StatusView:(UIGestureRecognizer *)recognizer {
+    [self hideStausView];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -41,6 +48,10 @@
 
 - (IBAction)button404Clicked:(id)sender {
     [self showStatusView:@"404"];
+}
+
+- (IBAction)button405Clicked:(id)sender {
+    [self showStatusView:@"405"];
 }
 
 - (IBAction)buttonNoNetworkingClicked:(id)sender {
