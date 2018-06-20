@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16837E9920C7EADC001108F9 /* Demo405View.m in Sources */ = {isa = PBXBuildFile; fileRef = 16837E9820C7EADC001108F9 /* Demo405View.m */; };
 		16B4FFE32099EB2C008E77F9 /* DemoTipModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B4FFE22099EB2B008E77F9 /* DemoTipModelFactory.m */; };
 		21E9873C22301FC9D3706485 /* libPods-DemoViewControllerTipViewUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BDFABDCDA50654ABACF66CF /* libPods-DemoViewControllerTipViewUITests.a */; };
 		3FC2560416D4B48B479C4433 /* libPods-DemoViewControllerTipViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D38F28D652DB7550D9C8D4 /* libPods-DemoViewControllerTipViewTests.a */; };
@@ -41,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		00D38F28D652DB7550D9C8D4 /* libPods-DemoViewControllerTipViewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoViewControllerTipViewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16837E9720C7EADC001108F9 /* Demo405View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo405View.h; sourceTree = "<group>"; };
+		16837E9820C7EADC001108F9 /* Demo405View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo405View.m; sourceTree = "<group>"; };
 		16B4FFE12099EB2B008E77F9 /* DemoTipModelFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoTipModelFactory.h; sourceTree = "<group>"; };
 		16B4FFE22099EB2B008E77F9 /* DemoTipModelFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTipModelFactory.m; sourceTree = "<group>"; };
 		21A4D06E91108C9B3B97143C /* Pods-DemoViewControllerTipViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoViewControllerTipViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoViewControllerTipViewTests/Pods-DemoViewControllerTipViewTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +102,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16837E9620C7EA3F001108F9 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				16837E9720C7EADC001108F9 /* Demo405View.h */,
+				16837E9820C7EADC001108F9 /* Demo405View.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		26CCC8C3FECD2880B8C3DFF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +146,7 @@
 		CC352FD62097169800E2FC0A /* DemoViewControllerTipView */ = {
 			isa = PBXGroup;
 			children = (
+				16837E9620C7EA3F001108F9 /* CustomView */,
 				CC3530092097251100E2FC0A /* ViewController */,
 				CC352FD72097169800E2FC0A /* AppDelegate.h */,
 				CC352FD82097169800E2FC0A /* AppDelegate.m */,
@@ -477,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC352FDC2097169800E2FC0A /* ViewController.m in Sources */,
+				16837E9920C7EADC001108F9 /* Demo405View.m in Sources */,
 				CC352FE72097169900E2FC0A /* main.m in Sources */,
 				CC352FD92097169800E2FC0A /* AppDelegate.m in Sources */,
 				16B4FFE32099EB2C008E77F9 /* DemoTipModelFactory.m in Sources */,

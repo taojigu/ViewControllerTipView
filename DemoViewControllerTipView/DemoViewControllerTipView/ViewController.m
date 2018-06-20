@@ -53,5 +53,10 @@
     [self registerStatusTipArray:tipModelArray];
 }
 
+- (void)registerStatusView {
+    
+    [self registerStatusView:@"405" statusView:nil];
+}
+
 
 @end
