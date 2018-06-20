@@ -15,6 +15,8 @@
 @property (nonatomic) VTStatusTipView *statusTipView;
 @property (nonatomic) NSMutableDictionary *statusViewDict;
 
+
+
 @end;
 
 
@@ -44,24 +46,6 @@
     
 }
 
-- (void)showStatusView:(NSString *)statusCode {
-    NSAssert(statusCode.length > 0, @"status Code should not be nil");
-    VTStatusTipModel *model = self.statusTipModelDict[statusCode];
-    if (!model) {
-        return;
-    }
-    [self.statusTipView confgureTipModel:model];
-    [self.statusTipView removeFromSuperview];
-    [self.view addSubview:self.statusTipView];
-}
-
-- (void)hideStausView {
-    [self.statusTipView removeFromSuperview];
-}
-
-- (void)registerStatusView:(NSString *)statusCode statusView:(id<VTShowStatus>)statusView {
-    
-}
 
 #pragma mark -- property messages
 - (NSMutableDictionary *)statusTipModelDict {
